@@ -21,3 +21,41 @@
     <script src="scripts.js"></script>
 </body>
 </html>
+
+<script>  function startRadio() {
+    const audioPlayer = document.getElementById('audioPlayer');
+    // Utilisez l'URL d'un flux radio public
+    audioPlayer.src = 'https://stream.live.vc.bbcmedia.co.uk/bbc_radio_one';
+    audioPlayer.play();
+}
+
+function stopRadio() {
+    const audioPlayer = document.getElementById('audioPlayer');
+    audioPlayer.pause();
+    audioPlayer.src = '';
+}    </script>
+
+<style>   body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}     </style>
