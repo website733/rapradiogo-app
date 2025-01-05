@@ -167,8 +167,8 @@
     </script>
    
 
-    <script>
-        // Check if audio is playing
+     <script>
+        // Vérifier si l'audio est en cours de lecture
         const audioPlayer = document.getElementById('audioPlayer');
         let isPlaying = false;
 
@@ -182,40 +182,38 @@
             checkDiscordStatusAndUpdate();
         });
 
-        // Function to check if Discord is open
+        // Fonction pour vérifier si Discord est ouvert et mettre à jour le statut
         function checkDiscordStatusAndUpdate() {
             if (isPlaying) {
-                // Check if Discord is open using Discord RPC
+                // Simuler la vérification si Discord est ouvert
                 checkDiscordOpen().then(isOpen => {
                     if (isOpen) {
-                        // If Discord is open, update the status
+                        // Si Discord est ouvert, mettre à jour le statut
                         updateDiscordStatus();
                     }
                 });
             }
         }
 
-        // Function to check if Discord is open
+        // Fonction pour vérifier si Discord est ouvert
         async function checkDiscordOpen() {
-            // This function should implement the check for Discord being open
-            // For example, by checking the Discord RPC connection
-            // Here, we simulate the check with a Promise that resolves to true
+            // Cette fonction devrait implémenter la vérification de l'ouverture de Discord
+            // Par exemple, en utilisant la connexion Discord RPC
+            // Ici, nous simulons la vérification avec une Promise qui résout à true
             return new Promise(resolve => {
                 setTimeout(() => resolve(true), 1000);
             });
         }
 
-        // Function to update the Discord status
+        // Fonction pour mettre à jour le statut Discord
         function updateDiscordStatus() {
             const clientId = '1212699828946075659';
             const redirectUri = encodeURIComponent('https://radiorapgo.vercel.app/?discord-auth');
-            const scope = 'rpc+presences.write+email';
+            const scope = 'rpc+email+rpc.voice.write+rpc.screenshare.read+rpc.notifications.read+rpc.voice.read+rpc.video.write+rpc.activities.write+activities.write+activities.read+rpc.video.read+rpc.screenshare.write+presences.write+presences.read';
             const discordAuthUrl = `https://discord.com/oauth2/authorize?client_id=${clientId}&response_type=code&redirect_uri=${redirectUri}&scope=${scope}`;
 
-            // Redirect user to Discord authorization
+            // Rediriger l'utilisateur vers l'autorisation Discord
             window.location.href = discordAuthUrl;
-        }
-    </script>
 
   
 </body>
