@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RadioRap Go</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #333;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            margin: 20px 0;
+            color: #4CAF50;
+        }
+
+        .radio-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .radio-item {
+            background: #444;
+            padding: 15px;
+            border-radius: 10px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .radio-item button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .radio-item button:hover {
+            background: #45a049;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎧 RadioRap Go 🎧</h1>
+    <div class="radio-container">
+        <div class="radio-item">
+            <h3>Skyrock</h3>
+            <button onclick="playRadio('http://icecast.skyrock.net/s/natio_mp3_128k')">▶️ Écouter</button>
+        </div>
+        <div class="radio-item">
+            <h3>Fun Radio</h3>
+            <button onclick="playRadio('http://streaming.radio.funradio.fr/fun-1-44-128')">▶️ Écouter</button>
+        </div>
+        <div class="radio-item">
+            <h3>NRJ</h3>
+            <button onclick="playRadio('http://cdn.nrjaudio.fm/audio1/fr/30001/mp3_128.mp3')">▶️ Écouter</button>
+        </div>
+        <div class="radio-item">
+            <h3>RTL 2</h3>
+            <button onclick="playRadio('http://streaming.radio.rtl2.fr/rtl2-1-44-128')">▶️ Écouter</button>
+        </div>
+        <div class="radio-item">
+            <h3>RMC</h3>
+            <button onclick="playRadio('http://chai5she.cdn.dvmr.fr/rmcinfo')">▶️ Écouter</button>
+        </div>
+    </div>
+
+    <audio id="radio-player" controls style="margin-top: 20px; width: 90%; max-width: 600px; display: none;"></audio>
+
+    <footer>
+        Créé avec ❤️ par Kieran pour écouter vos radios préférées.
+    </footer>
+
+    <script>
+        const player = document.getElementById('radio-player');
+
+        function playRadio(url) {
+            player.src = url;
+            player.play();
+            player.style.display = 'block'; // Affiche le lecteur audio
+        }
+    </script>
+</body>
+</html>
