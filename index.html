@@ -63,11 +63,14 @@
 <body>
     <h1>🎧 RadioRap Go 🎧</h1>
     <div class="radio-container">
+        <!-- Radios musicales -->
         <div class="radio-item">
             <h3>Skyrock</h3>
             <button onclick="playRadio('http://icecast.skyrock.net/s/natio_mp3_128k')">▶️ Écouter</button>
         </div>
-       
+        <div class="radio-item">
+            <h3>Fun Radio</h3>
+            <button onclick="playRadio('http://streaming.radio.funradio.fr/fun-1-44-128')">▶️ Écouter</button>
         </div>
         <div class="radio-item">
             <h3>NRJ</h3>
@@ -77,14 +80,38 @@
             <h3>RTL 2</h3>
             <button onclick="playRadio('http://streaming.radio.rtl2.fr/rtl2-1-44-128')">▶️ Écouter</button>
         </div>
+        <div class="radio-item">
+            <h3>RMC</h3>
+            <button onclick="playRadio('http://chai5she.cdn.dvmr.fr/rmcinfo')">▶️ Écouter</button>
+        </div>
 
+        <!-- Radios de podcasts -->
+        <div class="radio-item">
+            <h3>France Culture</h3>
+            <button onclick="playRadio('https://icecast.radiofrance.fr/franceculture-midfi.mp3')">▶️ Écouter</button>
+        </div>
+        <div class="radio-item">
+            <h3>France Inter</h3>
+            <button onclick="playRadio('https://icecast.radiofrance.fr/franceinter-midfi.mp3')">▶️ Écouter</button>
+        </div>
+        <div class="radio-item">
+            <h3>Europe 1</h3>
+            <button onclick="playRadio('http://ais-live.cloud-services.paris:8000/europe1.mp3')">▶️ Écouter</button>
+        </div>
+        <div class="radio-item">
+            <h3>BBC World Service</h3>
+            <button onclick="playRadio('http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-eieuk')">▶️ Écouter</button>
+        </div>
+        <div class="radio-item">
+            <h3>Radio Nova</h3>
+            <button onclick="playRadio('http://nova-live-mp3-128.scdn.arkena.com/nova.mp3')">▶️ Écouter</button>
         </div>
     </div>
 
     <audio id="radio-player" controls style="margin-top: 20px; width: 90%; max-width: 600px; display: none;"></audio>
 
     <footer>
-        Créé avec ❤️ par Kieran pour écouter vos radios préférées.
+        Créé avec ❤️ par Kieran pour écouter vos radios et podcasts préférées .
     </footer>
 
     <script>
@@ -98,3 +125,4 @@
     </script>
 </body>
 </html>
+
