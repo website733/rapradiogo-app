@@ -4,9 +4,52 @@
 
   <div class="info-banner">
     
+     .info-header {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      color: #ffffff;
+      background-color: #d9534f;
+      padding: 10px;
+      text-align: center;
+      border-radius: 5px 5px 0 0;
+    }
+    .info-banner {
+      background-color: #f5c6cb;
+      color: #721c24;
+      padding: 10px;
+      border: 1px solid #f5c6cb;
+      border-top: none;
+      border-radius: 0 0 5px 5px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+    }
+    .info-banner img {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+    .info-banner a {
+      color: #721c24;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    .info-banner a:hover {
+      color: #501214;
+    }
+  </style>
+</head>
+<body>
+  <div class="info-header">
+    Annonce importante
+  </div>
+  <div class="info-banner">
+
     <span>
       Si une des radios ou podcasts ne fonctionne pas, cela peut être dû au fait qu'ils ne sont pas en ligne, qu'ils n'enregistrent pas, ou à des problèmes techniques avec <strong>RadioRap Go</strong>.
-      <a href="mailto:radiorapgo@mbox.re">Contactez le support</a> pour plus d'informations.
+      <a href="#contact-support">Contactez le support</a> pour plus d'informations.
     </span>
     
     <meta charset="UTF-8">
@@ -69,6 +112,7 @@
     </style>
 </head>
 <body>
+  <center>
     <h1>🎧 RadioRap Go 🎧</h1>
     <div class="radio-container">
         <!-- Radios musicales -->
@@ -121,7 +165,7 @@
     <footer>
         Créé avec ❤️ par Kieran pour écouter vos radios et podcasts préférées .
     </footer>
-
+</center>
     <script>
         const player = document.getElementById('radio-player');
 
