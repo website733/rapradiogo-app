@@ -167,53 +167,7 @@
     </script>
    
 
-     <script>
-        // Vérifier si l'audio est en cours de lecture
-        const audioPlayer = document.getElementById('audioPlayer');
-        let isPlaying = false;
-
-        audioPlayer.addEventListener('play', () => {
-            isPlaying = true;
-            checkDiscordStatusAndUpdate();
-        });
-
-        audioPlayer.addEventListener('pause', () => {
-            isPlaying = false;
-            checkDiscordStatusAndUpdate();
-        });
-
-        // Fonction pour vérifier si Discord est ouvert et mettre à jour le statut
-        function checkDiscordStatusAndUpdate() {
-            if (isPlaying) {
-                // Simuler la vérification si Discord est ouvert
-                checkDiscordOpen().then(isOpen => {
-                    if (isOpen) {
-                        // Si Discord est ouvert, mettre à jour le statut
-                        updateDiscordStatus();
-                    }
-                });
-            }
-        }
-
-        // Fonction pour vérifier si Discord est ouvert
-        async function checkDiscordOpen() {
-            // Cette fonction devrait implémenter la vérification de l'ouverture de Discord
-            // Par exemple, en utilisant la connexion Discord RPC
-            // Ici, nous simulons la vérification avec une Promise qui résout à true
-            return new Promise(resolve => {
-                setTimeout(() => resolve(true), 1000);
-            });
-        }
-
-        // Fonction pour mettre à jour le statut Discord
-        function updateDiscordStatus() {
-            const clientId = '1212699828946075659';
-            const redirectUri = encodeURIComponent('https://radiorapgo.vercel.app/?discord-auth');
-            const scope = 'rpc+email+rpc.voice.write+rpc.screenshare.read+rpc.notifications.read+rpc.voice.read+rpc.video.write+rpc.activities.write+activities.write+activities.read+rpc.video.read+rpc.screenshare.write+presences.write+presences.read';
-            const discordAuthUrl = `https://discord.com/oauth2/authorize?client_id=${clientId}&response_type=code&redirect_uri=${redirectUri}&scope=${scope}`;
-
-            // Rediriger l'utilisateur vers l'autorisation Discord
-            window.location.href = discordAuthUrl;
+       
 
   
 </body>
